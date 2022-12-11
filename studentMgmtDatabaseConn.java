@@ -16,7 +16,7 @@ import java.sql.SQLException;
  */
 public class studentMgmtDatabaseConn {
     final static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    final static String DB_URL = "jdbc:mysql://localhost:3306/Database Name: Student_Mgmt_Sadia";
+    final static String DB_URL = "jdbc:mysql://localhost:3306/student_mgmt_sadia";
     final static String USER = "root";
     final static String PASSWORD = "";
     
