@@ -1,4 +1,5 @@
 # SADIA MOBASSHIRA
+## Student Management System - AIUB JAVA PROJECT.
 ###### SCREENSHOTS OF PROJECT
 1.
 ![image](https://user-images.githubusercontent.com/120294560/206921447-a4db3203-f474-4530-a09a-54a9141ad84d.png)
