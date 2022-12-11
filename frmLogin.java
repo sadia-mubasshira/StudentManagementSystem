@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author SADIA MOBASSHIRA
  */
-public class formLogin extends javax.swing.JFrame {
+public class frmLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form formLogin
