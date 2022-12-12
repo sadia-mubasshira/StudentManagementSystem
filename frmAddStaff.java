@@ -5,26 +5,56 @@
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
+//unused library
 //import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author SADIA MOBASSHIRA
- */
+ * @Department of CSE
+ * @ID: 21-45727-3
+ * @American International University - Bangladesh
+ *
+ **/
+
+/*
+  ________     __       ________   __          __       ___      ___     ______    _______       __        ________  ________  __    __   __      _______        __      
+ /"       )   /""\     |"      "\ |" \        /""\     |"  \    /"  |   /    " \  |   _  "\     /""\      /"       )/"       )/" |  | "\ |" \    /"      \      /""\     
+(:   \___/   /    \    (.  ___  :)||  |      /    \     \   \  //   |  // ____  \ (. |_)  :)   /    \    (:   \___/(:   \___/(:  (__)  :)||  |  |:        |    /    \    
+ \___  \    /' /\  \   |: \   ) |||:  |     /' /\  \    /\\  \/.    | /  /    ) :)|:     \/   /' /\  \    \___  \   \___  \   \/      \/ |:  |  |_____/   )   /' /\  \   
+  __/  \\  //  __'  \  (| (___\ |||.  |    //  __'  \  |: \.        |(: (____/ // (|  _  \\  //  __'  \    __/  \\   __/  \\  //  __  \\ |.  |   //      /   //  __'  \  
+ /" \   :)/   /  \\  \ |:       :)/\  |\  /   /  \\  \ |.  \    /:  | \        /  |: |_)  :)/   /  \\  \  /" \   :) /" \   :)(:  (  )  :)/\  |\ |:  __   \  /   /  \\  \ 
+(_______/(___/    \___)(________/(__\_|_)(___/    \___)|___|\__/|___|  \"_____/   (_______/(___/    \___)(_______/ (_______/  \__|  |__/(__\_|_)|__|  \___)(___/    \___)
+                                                                                                                                                                         
+*/
+
 public class frmAddStaff extends javax.swing.JFrame {
 
     /**
      * Creates new form frmAddStaff
      */
+    
+    /**
+    Local variables
+    Data type: String
+    initialized null
+    **/
+    
     Connection con = null;
     Statement stmt = null;
     ResultSet rs = null;
     
+    //End initializing local variables.
+    /* !!!!! Some variables may not be readed or initialized. Ignore the warning.*/
+    
     public frmAddStaff() {
+        //titling the specific form
         super("ADD STAFF");
+        //initiating components
         initComponents();
-                con = studentMgmtDatabaseConn.connection();
+        //calling the database
+        con = studentMgmtDatabaseConn.connection();
     }
 
     /**
@@ -185,13 +215,16 @@ public class frmAddStaff extends javax.swing.JFrame {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
+        //"BACK" BUTTON CODE GOES HERE
         setVisible(false);
         frmHome object = new frmHome();
         object.setVisible(true);
+        //"BACK" BUTTON CODE ENDS HERE
     }                                       
 
     private void btnAddStaffActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
+        //"ADD STAFF" BUTTON CODE GOES HERE
         try{
             stmt = con.createStatement();
             String staffFullNameInput = staffFullName.getText();
@@ -209,6 +242,7 @@ public class frmAddStaff extends javax.swing.JFrame {
         catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
+        //"ADD STAFF" BUTTON CODE ENDS HERE
     }                                           
 
     /**
