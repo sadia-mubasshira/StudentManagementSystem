@@ -9,7 +9,23 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author SADIA MOBASSHIRA
- */
+ * @Department of CSE
+ * @ID: 21-45727-3
+ * @American International University - Bangladesh
+ *
+ **/
+
+/*
+ 
+  ________     __       ________   __          __       ___      ___     ______    _______       __        ________  ________  __    __   __      _______        __      
+ /"       )   /""\     |"      "\ |" \        /""\     |"  \    /"  |   /    " \  |   _  "\     /""\      /"       )/"       )/" |  | "\ |" \    /"      \      /""\     
+(:   \___/   /    \    (.  ___  :)||  |      /    \     \   \  //   |  // ____  \ (. |_)  :)   /    \    (:   \___/(:   \___/(:  (__)  :)||  |  |:        |    /    \    
+ \___  \    /' /\  \   |: \   ) |||:  |     /' /\  \    /\\  \/.    | /  /    ) :)|:     \/   /' /\  \    \___  \   \___  \   \/      \/ |:  |  |_____/   )   /' /\  \   
+  __/  \\  //  __'  \  (| (___\ |||.  |    //  __'  \  |: \.        |(: (____/ // (|  _  \\  //  __'  \    __/  \\   __/  \\  //  __  \\ |.  |   //      /   //  __'  \  
+ /" \   :)/   /  \\  \ |:       :)/\  |\  /   /  \\  \ |.  \    /:  | \        /  |: |_)  :)/   /  \\  \  /" \   :) /" \   :)(:  (  )  :)/\  |\ |:  __   \  /   /  \\  \ 
+(_______/(___/    \___)(________/(__\_|_)(___/    \___)|___|\__/|___|  \"_____/   (_______/(___/    \___)(_______/ (_______/  \__|  |__/(__\_|_)|__|  \___)(___/    \___)
+                                                                                                                                                                         
+*/
 
 public class frmAddStudent extends javax.swing.JFrame {
 
@@ -17,13 +33,25 @@ public class frmAddStudent extends javax.swing.JFrame {
      * Creates new form frmAddStudent
      */
     
+    /**
+    Local variables
+    Data type: String
+    initialized null
+    **/
+    
     Connection con = null;
     Statement stmt = null;
     ResultSet rs = null;
     
+    //End initializing local variables.
+    /* !!!!! Some variables may not be readed or initialized. Ignore the warning.*/
+    
     public frmAddStudent() {
+        //titling specific form
         super("ADD STUDENT");
+        //initiating components
         initComponents();
+        //calling the database
         con = studentMgmtDatabaseConn.connection();
     }
 
@@ -92,7 +120,7 @@ public class frmAddStudent extends javax.swing.JFrame {
         jLabel6.setText("GUARDIAN PHONE");
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("PERMANANT ADDRESS");
+        jLabel7.setText("PERMANENT ADDRESS");
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("PRESENT ADDRESS");
@@ -121,7 +149,7 @@ public class frmAddStudent extends javax.swing.JFrame {
             }
         });
 
-        studentCourse.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        studentCourse.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CSE", "EEE", "ECE", "MEC", " " }));
 
         studentSSC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -328,7 +356,10 @@ public class frmAddStudent extends javax.swing.JFrame {
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        System.exit(0);
+        //System.exit(0);
+                setVisible(false);
+                frmHome object = new frmHome();
+                object.setVisible(true);
     }                                         
 
     private void btnAddRecordActionPerformed(java.awt.event.ActionEvent evt) {                                             
@@ -349,7 +380,7 @@ public class frmAddStudent extends javax.swing.JFrame {
             String studentSSCInput = studentSSC.getText();
             String studentHSCInput = studentHSC.getText();
             
-            String sql = "INSERT INTO students(STUDENTNAME,STUDENTFATHERNAME,STUDENTMOTHERNAME,STUDENTEMAIL,STUDENTPHONE,STUDENTFATHERPHONE, STUDENTPERMANANTADDRESS,STUDENTPRESENTADDRESS,STUDENTGENDER,STUDENTNID,STUDENTCOURSE,STUDENTSSC,STUDENTHSC) VALUES ('"+studentNameInput+"','"+studentFatherNameInput+"','"+studentMotherNameInput+"','"+studentEmailInput+"','"+studentPhoneInput+"','"+studentFatherPhoneInput+"','"+studentPermanentAddressInput+"','"+studentPresentAddressInput+"','"+studentGenderInput+"','"+studentNIDInput+"','"+studentCourseInput+"','"+studentSSCInput+"','"+studentHSCInput+"')";
+            String sql = "INSERT INTO students(STUDENTNAME,STUDENTFATHERNAME,STUDENTMOTHERNAME,STUDENTEMAIL,STUDENTPHONE,STUDENTFATHERPHONE, STUDENTPERMANENTADDRESS,STUDENTPRESENTADDRESS,STUDENTGENDER,STUDENTNID,STUDENTCOURSE,STUDENTSSC,STUDENTHSC) VALUES ('"+studentNameInput+"','"+studentFatherNameInput+"','"+studentMotherNameInput+"','"+studentEmailInput+"','"+studentPhoneInput+"','"+studentFatherPhoneInput+"','"+studentPermanentAddressInput+"','"+studentPresentAddressInput+"','"+studentGenderInput+"','"+studentNIDInput+"','"+studentCourseInput+"','"+studentSSCInput+"','"+studentHSCInput+"')";
             
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "RECORD ADDED SUCCESSFULLY");
