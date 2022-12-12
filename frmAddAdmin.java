@@ -49,6 +49,7 @@ public class frmAddAdmin extends javax.swing.JFrame {
     /* !!!!! Some variables may not be readed or initialized. Ignore the warning.*/
     
     public frmAddAdmin() {
+     //titling the specific form
         super("ADD ADMIN TO THE MANAGEMENT SYSTEM");
         //initiating components
         initComponents();
