@@ -65,7 +65,6 @@ public class frmUpdateStudent extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        btnAddRecord1 = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         studentID = new javax.swing.JTextField();
@@ -144,8 +143,8 @@ public class frmUpdateStudent extends javax.swing.JFrame {
         });
 
         btnAddRecord.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAddRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project_Images/add-button.png"))); // NOI18N
-        btnAddRecord.setText("ADD RECORD");
+        btnAddRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project_Images/changes.png"))); // NOI18N
+        btnAddRecord.setText("UPDATE");
         btnAddRecord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddRecordActionPerformed(evt);
@@ -165,16 +164,7 @@ public class frmUpdateStudent extends javax.swing.JFrame {
         jLabel10.setText("GENDER");
 
         jLabel15.setFont(new java.awt.Font("Cambria", 0, 36)); // NOI18N
-        jLabel15.setText("STUDENT REGISTRATION FORM");
-
-        btnAddRecord1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAddRecord1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project_Images/add-button.png"))); // NOI18N
-        btnAddRecord1.setText("ADD RECORD");
-        btnAddRecord1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddRecord1ActionPerformed(evt);
-            }
-        });
+        jLabel15.setText("STUDENT UPDATE FORM");
 
         btnSearch.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Project_Images/search.png"))); // NOI18N
@@ -189,6 +179,11 @@ public class frmUpdateStudent extends javax.swing.JFrame {
         jLabel16.setText("STUDENT ID");
 
         studentID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        studentID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studentIDActionPerformed(evt);
+            }
+        });
 
         studentCourse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,8 +222,7 @@ public class frmUpdateStudent extends javax.swing.JFrame {
                                                 .addComponent(studentPermanentAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(studentPresentAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                                    .addComponent(btnAddRecord1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(43, 43, 43)
+                                                    .addGap(243, 243, 243)
                                                     .addComponent(btnAddRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addComponent(studentGender, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -244,7 +238,7 @@ public class frmUpdateStudent extends javax.swing.JFrame {
                                                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(studentSSC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                                                 .addComponent(jLabel13)
                                                 .addGap(25, 25, 25)
                                                 .addComponent(studentHSC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -259,27 +253,27 @@ public class frmUpdateStudent extends javax.swing.JFrame {
                                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addGap(18, 18, 18)
                                                         .addComponent(studentCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE))))
                             .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(264, 264, 264)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(280, 280, 280)
+                                .addComponent(jLabel16)
+                                .addGap(23, 23, 23)
+                                .addComponent(studentID, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(264, 264, 264)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(421, 421, 421)
-                .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studentID, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,7 +330,6 @@ public class frmUpdateStudent extends javax.swing.JFrame {
                     .addComponent(studentGender, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAddRecord1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAddRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -371,8 +364,10 @@ public class frmUpdateStudent extends javax.swing.JFrame {
 
     private void btnAddRecordActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
+        
         try{
             stmt = con.createStatement();
+            int studentIDInput = Integer.parseInt(studentID.getText()); 
             String studentNameInput = studentName.getText();
             String studentFatherNameInput = studentFatherName.getText();
             String studentMotherNameInput = studentMotherName.getText();
@@ -387,10 +382,10 @@ public class frmUpdateStudent extends javax.swing.JFrame {
             String studentSSCInput = studentSSC.getText();
             String studentHSCInput = studentHSC.getText();
 
-            String sql = "INSERT INTO students(STUDENTNAME,STUDENTFATHERNAME,STUDENTMOTHERNAME,STUDENTEMAIL,STUDENTPHONE,STUDENTFATHERPHONE, STUDENTPERMANANTADDRESS,STUDENTPRESENTADDRESS,STUDENTGENDER,STUDENTNID,STUDENTCOURSE,STUDENTSSC,STUDENTHSC) VALUES ('"+studentNameInput+"','"+studentFatherNameInput+"','"+studentMotherNameInput+"','"+studentEmailInput+"','"+studentPhoneInput+"','"+studentFatherPhoneInput+"','"+studentPermanentAddressInput+"','"+studentPresentAddressInput+"','"+studentGenderInput+"','"+studentNIDInput+"','"+studentCourseInput+"','"+studentSSCInput+"','"+studentHSCInput+"')";
+            String sql = "UPDATE students SET STUDENTNAME='"+studentNameInput+"',STUDENTFATHERNAME='"+studentFatherNameInput+"',STUDENTMOTHERNAME='"+studentMotherNameInput+"',STUDENTEMAIL='"+studentEmailInput+"',STUDENTPHONE='"+studentPhoneInput+"',STUDENTFATHERPHONE='"+studentFatherPhoneInput+"',STUDENTPERMANENTADDRESS='"+studentPermanentAddressInput+"',STUDENTPRESENTADDRESS='"+studentPresentAddressInput+"',STUDENTGENDER='"+studentGenderInput+"',STUDENTNID='"+studentNIDInput+"',STUDENTCOURSE='"+studentCourseInput+"',STUDENTSSC='"+studentSSCInput+"',STUDENTHSC='"+studentHSCInput+"' WHERE USERID = '"+studentIDInput+"'";
 
             stmt.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "RECORD ADDED SUCCESSFULLY");
+            JOptionPane.showMessageDialog(null, "RECORD UPDATED SUCCESSFULLY");
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
@@ -404,10 +399,6 @@ public class frmUpdateStudent extends javax.swing.JFrame {
         frmHome object = new frmHome();
         object.setVisible(true);
     }                                         
-
-    private void btnAddRecord1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        // TODO add your handling code here:
-    }                                             
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
@@ -451,6 +442,10 @@ public class frmUpdateStudent extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                             
 
+    private void studentIDActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
     /**
      * @param args the command line arguments
      */
@@ -488,7 +483,6 @@ public class frmUpdateStudent extends javax.swing.JFrame {
 
     // Variables declaration - do not modify                     
     private javax.swing.JButton btnAddRecord;
-    private javax.swing.JButton btnAddRecord1;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnSearch;
     private javax.swing.JLabel jLabel1;
