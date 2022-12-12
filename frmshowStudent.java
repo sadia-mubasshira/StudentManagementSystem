@@ -13,7 +13,24 @@ import net.proteanit.sql.DbUtils;
 /**
  *
  * @author SADIA MOBASSHIRA
- */
+ * @Department of CSE
+ * @ID: 21-45727-3
+ * @American International University - Bangladesh
+ *
+ **/
+
+/*
+ 
+  ________     __       ________   __          __       ___      ___     ______    _______       __        ________  ________  __    __   __      _______        __      
+ /"       )   /""\     |"      "\ |" \        /""\     |"  \    /"  |   /    " \  |   _  "\     /""\      /"       )/"       )/" |  | "\ |" \    /"      \      /""\     
+(:   \___/   /    \    (.  ___  :)||  |      /    \     \   \  //   |  // ____  \ (. |_)  :)   /    \    (:   \___/(:   \___/(:  (__)  :)||  |  |:        |    /    \    
+ \___  \    /' /\  \   |: \   ) |||:  |     /' /\  \    /\\  \/.    | /  /    ) :)|:     \/   /' /\  \    \___  \   \___  \   \/      \/ |:  |  |_____/   )   /' /\  \   
+  __/  \\  //  __'  \  (| (___\ |||.  |    //  __'  \  |: \.        |(: (____/ // (|  _  \\  //  __'  \    __/  \\   __/  \\  //  __  \\ |.  |   //      /   //  __'  \  
+ /" \   :)/   /  \\  \ |:       :)/\  |\  /   /  \\  \ |.  \    /:  | \        /  |: |_)  :)/   /  \\  \  /" \   :) /" \   :)(:  (  )  :)/\  |\ |:  __   \  /   /  \\  \ 
+(_______/(___/    \___)(________/(__\_|_)(___/    \___)|___|\__/|___|  \"_____/   (_______/(___/    \___)(_______/ (_______/  \__|  |__/(__\_|_)|__|  \___)(___/    \___)
+                                                                                                                                                                         
+*/
+
 public class frmshowStudents extends javax.swing.JFrame {
 
     /**
@@ -56,9 +73,6 @@ public class frmshowStudents extends javax.swing.JFrame {
         studentTableView = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -90,12 +104,12 @@ public class frmshowStudents extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1188, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 960, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,17 +118,9 @@ public class frmshowStudents extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE))
         );
-
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,6 +141,9 @@ public class frmshowStudents extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
+                setVisible(false);
+                frmHome object = new frmHome();
+                object.setVisible(true);
     }                                        
 
     /**
@@ -176,9 +185,6 @@ public class frmshowStudents extends javax.swing.JFrame {
     // Variables declaration - do not modify                     
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable studentTableView;
