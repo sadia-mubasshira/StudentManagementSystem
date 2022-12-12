@@ -10,12 +10,28 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-//finished all import
 
 /**
  *
  * @author SADIA MOBASSHIRA
- */
+ * @Department of CSE
+ * @ID: 21-45727-3
+ * @American International University - Bangladesh
+ *
+ **/
+
+/*
+ 
+  ________     __       ________   __          __       ___      ___     ______    _______       __        ________  ________  __    __   __      _______        __      
+ /"       )   /""\     |"      "\ |" \        /""\     |"  \    /"  |   /    " \  |   _  "\     /""\      /"       )/"       )/" |  | "\ |" \    /"      \      /""\     
+(:   \___/   /    \    (.  ___  :)||  |      /    \     \   \  //   |  // ____  \ (. |_)  :)   /    \    (:   \___/(:   \___/(:  (__)  :)||  |  |:        |    /    \    
+ \___  \    /' /\  \   |: \   ) |||:  |     /' /\  \    /\\  \/.    | /  /    ) :)|:     \/   /' /\  \    \___  \   \___  \   \/      \/ |:  |  |_____/   )   /' /\  \   
+  __/  \\  //  __'  \  (| (___\ |||.  |    //  __'  \  |: \.        |(: (____/ // (|  _  \\  //  __'  \    __/  \\   __/  \\  //  __  \\ |.  |   //      /   //  __'  \  
+ /" \   :)/   /  \\  \ |:       :)/\  |\  /   /  \\  \ |.  \    /:  | \        /  |: |_)  :)/   /  \\  \  /" \   :) /" \   :)(:  (  )  :)/\  |\ |:  __   \  /   /  \\  \ 
+(_______/(___/    \___)(________/(__\_|_)(___/    \___)|___|\__/|___|  \"_____/   (_______/(___/    \___)(_______/ (_______/  \__|  |__/(__\_|_)|__|  \___)(___/    \___)
+                                                                                                                                                                         
+*/
+
 public class frmLogin extends javax.swing.JFrame {
 
     /**
@@ -26,7 +42,7 @@ public class frmLogin extends javax.swing.JFrame {
     Statement stmt = null;
     ResultSet rs = null;
     
-    public formLogin() {
+    public frmLogin() {
         //Form title goes here
         super("AIUB STUDENT MANAGEMENT LOGIN FORM");
         //Finished code for title
@@ -242,20 +258,21 @@ public class frmLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(formLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(formLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(formLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(formLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new formLogin().setVisible(true);
+                new frmLogin().setVisible(true);
             }
         });
     }
